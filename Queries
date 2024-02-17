@@ -1,0 +1,293 @@
+CREATE TABLE Employee(
+	Emp_id int,
+    Emp_name varchar(50),
+    Salary int
+
+
+);
+
+
+INSERT INTO employee(Emp_id, Emp_name, Salary)
+VALUES('2103', 'Arumugam', '25000');
+
+INSERT INTO employee(Emp_id, Emp_name, Salary)
+VALUES('4112', 'Ajay', '40000');
+
+INSERT INTO employee(Emp_id, Emp_name, Salary)
+VALUES('4254', 'Rahul', '35000');
+
+INSERT INTO employee(Emp_id, Emp_name, Salary)
+VALUES('3212', 'Neha', '15000');
+
+INSERT INTO employee(Emp_id, Emp_name, Salary)
+VALUES('6782', 'Arun', '20000');
+
+INSERT INTO employee(Emp_id, Emp_name, Salary)
+VALUES('8654', 'Amritha', '41000');
+
+INSERT INTO employee(Emp_id, Emp_name, Salary)
+VALUES('5673', 'Balu', '28000');
+
+INSERT INTO employee(Emp_id, Emp_name, Salary)
+VALUES('1423', 'Riya', '50000');
+
+INSERT INTO employee(Emp_id, Emp_name, Salary)
+VALUES('9023', 'Tara', '38000');
+
+INSERT INTO employee(Emp_id, Emp_name, Salary)
+VALUES('7543', 'Raghav', '32000');
+
+INSERT INTO employee(Emp_id, Emp_name, Salary)
+VALUES('5876', 'Utsav', '18000');
+
+INSERT INTO employee(Emp_id, Emp_name, Salary)
+VALUES('3298', 'Rehan', '70000');
+
+INSERT INTO employee(Emp_id, Emp_name, Salary)
+VALUES('4197', 'Harsh', '22000');
+
+INSERT INTO employee(Emp_id, Emp_name, Salary)
+VALUES('5739', 'Yashasvi', '40000');
+
+INSERT INTO employee(Emp_id, Emp_name, Salary)
+VALUES('8518', 'Vatsal', '36000');
+
+
+
+*--ALTER----*
+
+ALTER TABLE person 
+
+CHANGE COLUMN personID TO per_ID int(40);
+
+
+
+* --------BETWEEN -------*
+
+SELECT * FROM employee 
+WHERE Emp_id Between 1000 AND 3000;
+
+
+INSERT INTO customer1(cust_id, cust_name,  cust_no)
+VALUES('2', 'Rehan', '855745');
+
+INSERT INTO customer1(cust_id, cust_name,  cust_no)
+VALUES('3', 'Daksh', '4556656');
+
+
+INSERT INTO customer1(cust_id, cust_name,  cust_no)
+VALUES('4', 'Chaitanya', '454545212');
+
+
+INSERT INTO customer1(cust_id, cust_name,  cust_no)
+VALUES('5', 'Santosh', '4242412');
+
+
+INSERT INTO customer1(cust_id, cust_name,  cust_no)
+VALUES('6', 'Manish', '412125');
+
+
+-----*-----------------------------------------------*--------------------------------------------------------------------*-----------------------------------
+
+INSERT INTO customer2(products, cust_name,  cust_rating)
+VALUES('Ghee', 'Arumugam', '5');
+
+INSERT INTO customer2(products, cust_name,  cust_rating)
+VALUES('Curd', 'Rehan', '3.5');
+
+INSERT INTO customer2(products, cust_name,  cust_rating)
+VALUES('Wafers', 'Daksh', '4');
+
+INSERT INTO customer2(products, cust_name,  cust_rating)
+VALUES('Oil', 'Chaitanya', '4.5');
+
+INSERT INTO customer2(products, cust_name,  cust_rating)
+VALUES('Milk', 'Santosh', '3');
+
+INSERT INTO customer2(products, cust_name,  cust_rating)
+VALUES('Vegetables', 'Manish', '4');
+
+
+
+
+
+-------*****--------------------------------------***********------------------------------------
+
+
+Inner Join
+
+    1. SELECT * FROM customer1
+INNER JOIN customer2 ON customer1.cust_name = customer2.cust_name;
+
+    2. SELECT cust_id, cust_no, products 
+FROM customer1
+INNER JOIN customer2 ON customer1.cust_name = customer2.cust_name;
+
+Left Join
+
+SELECT customer1.cust_id, customer2.products
+FROM customer1
+LEFT JOIN customer2 ON customer1.cust_name = customer2.cust_name;
+
+
+
+
+SELECT customer1.cust_name, customer2.products, customer1.cust_no
+FROM customer1
+LEFT JOIN customer2 ON customer1.cust_name = customer2.cust_name;
+
+
+
+
+
+*****-------------------------------------------------------
+
+
+
+CREATE TABLE emp_details(
+emp_id int,
+emp_name varchar(50),
+supervisor_id int
+
+
+);
+
+
+CREATE TABLE supervisor_details(
+supervisor_id int,
+supervisor_name varchar(100),
+contact_no int
+
+
+);
+
+Emp_details column:- 
+
+emp_id  emp_name    supervisor_id   emp_salary  emp_rating  emp_email 
+
+
+Supervisor column:-   
+
+supervisor_id   supervisor_name contact_no  last_name
+
+
+INSERT INTO emp_details(emp_id, emp_name,  supervisor_id, emp_salary, emp_rating, emp_email)
+VALUES('1', 'Arumugam', '805', 45000, 3, 'abcgmailcom');
+
+INSERT INTO emp_details(emp_id, emp_name,  supervisor_id, emp_salary, emp_rating, emp_email)
+VALUES('2', 'Sahil', '806', 35000, 4, 'xyzgmailcom');
+
+
+INSERT INTO emp_details(emp_id, emp_name,  supervisor_id, emp_salary, emp_rating, emp_email)
+VALUES('3', 'Ajaz', '807', 50000, 2, 'rezgmailcom');
+
+
+INSERT INTO emp_details(emp_id, emp_name,  supervisor_id, emp_salary, emp_rating, emp_email)
+VALUES('4', 'Tara', '808', 15000, 5, 'erqgmailcom');
+
+
+INSERT INTO emp_details(emp_id, emp_name,  supervisor_id, emp_salary, emp_rating, emp_email)
+VALUES('5', 'Jaimin', '809', 40000, 4, 'twqgmailcom');
+
+
+INSERT INTO emp_details(emp_id, emp_name,  supervisor_id, emp_salary, emp_rating, emp_email)
+VALUES('6', 'Riya', '810', 48000, 4, 'saxgmailcom');
+
+
+INSERT INTO emp_details(emp_id, emp_name,  supervisor_id, emp_salary, emp_rating, emp_email)
+VALUES('7', 'Ajay', '811', 41123, 3, 'fdagmailcom');
+
+
+INSERT INTO emp_details(emp_id, emp_name,  supervisor_id, emp_salary, emp_rating, emp_email)
+VALUES('8', 'Harsh', '812', 55000, 5, 'hfdgmailcom');
+
+
+
+*************------------------------------------***************************-----------------------------
+
+
+
+Supervisor column:-   
+
+supervisor_id   supervisor_name contact_no  last_name
+
+
+INSERT INTO supervisor_details(supervisor_id, supervisor_name,  contact_no, last_name)
+VALUES(805, "Rahul", 7452123, "Vaza");
+
+INSERT INTO supervisor_details(supervisor_id, supervisor_name,  contact_no, last_name)
+VALUES(806, "Vimal", 4522112, "Rathod");
+
+
+INSERT INTO supervisor_details(supervisor_id, supervisor_name,  contact_no, last_name)
+VALUES(807, "Sameer ", 5646658, "Chauhan");
+
+
+INSERT INTO supervisor_details(supervisor_id, supervisor_name,  contact_no, last_name)
+VALUES(808, "Anirudh", 4211224, "Dodiya");
+
+
+INSERT INTO supervisor_details(supervisor_id, supervisor_name,  contact_no, last_name)
+VALUES(809, "Pradeep", 1232351, "Gamit");
+
+
+INSERT INTO supervisor_details(supervisor_id, supervisor_name,  contact_no, last_name)
+VALUES(810, "Nehal", 4213212, "Chowdhary");
+
+
+INSERT INTO supervisor_details(supervisor_id, supervisor_name,  contact_no, last_name)
+VALUES(811, "Minal", 4122333, "Chauhan");
+
+
+INSERT INTO supervisor_details(supervisor_id, supervisor_name,  contact_no, last_name)
+VALUES(812, "Prashant", 4774562, "Modi");
+
+
+--------------------******************----------------------------****************************--------------------------------------------
+
+INNER JOIN
+
+SELECT emp_name, emp_salary, contact_no
+FROM emp_details
+INNER JOIN supervisor_details ON emp_details.supervisor_id = supervisor_details.supervisor_id;
+
+LEFT JOIN
+
+SELECT emp_details.emp_name, emp_details.emp_rating, supervisor_details.contact_no
+FROM emp_details
+LEFT JOIN supervisor_details ON emp_details.supervisor_id = supervisor_details.supervisor_id
+ORDER BY emp_details.emp_id;
+
+RIGHT JOIN
+
+SELECT emp_details.emp_name, emp_details.emp_rating, supervisor_details.contact_no
+FROM emp_details
+RIGHT JOIN supervisor_details ON emp_details.supervisor_id = supervisor_details.supervisor_id
+ORDER BY emp_details.emp_id;
+
+OUTER JOIN
+
+---->> SELECT emp_details.emp_id, supervisor_details.contact_no
+FROM emp_details
+RIGHT OUTER JOIN supervisor_details ON emp_details.supervisor_id = supervisor_details.supervisor_id
+ORDER BY emp_details.emp_id;
+
+
+------>> SELECT emp_details.emp_id, supervisor_details.contact_no
+FROM emp_details
+LEFT OUTER JOIN supervisor_details ON emp_details.supervisor_id = supervisor_details.supervisor_id
+ORDER BY emp_details.emp_id;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
