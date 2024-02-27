@@ -1,0 +1,55 @@
+Normalization
+
+What is Normalization in DBMS?
+
+Normalization is the process of organizing a data in database. It includes creating tables and establishing relationships between those tables.
+
+
+Trigger
+
+A trigger in SQL is a stored procedure that automatically executes in response to a specific event, such as an INSERT, UPDATE, DELETE, or TRUNCATE statement, on a specified table or view.
+
+
+Q.3.) What are the benefits of using SQL triggers?
+
+Answer:- The benefits of using SQL triggers include:- 
+
+Data integrity:- Triggers allow you to enforce complex business rules and constraints at the database levels, ensuring that data remains consistent and accurate.
+
+Automation:- Triggers can automate repetitive or complex tasks by executing predefined actions whenever a specified event occurs. This reduces the need for manual intervention and improves efficiency.
+
+Audit trails:- Triggers can be used to track changes made to data, such as logging modifications in a separate audit table. This helps in auditing and maintaining a history of data changes.
+
+Data validation:- Triggers can perform additional validation checks on data before it is inserted, updated, or deleted, ensuring that only valid and conforming data is stored in the database.
+
+
+
+SAVEPOINT
+
+---> A SAVEPOINT is a point in a transaction in which you can roll the transaction back to a certain point without rolling back the entire transaction.
+
+---> Syntax for Savepoint command:- SAVEPOINT SAVEPOINT_NAME;
+
+
+What is Sql Key constraints
+
+---> The PRIMARY KEY constraints uniquely identifies each record in a table. Primary keys must contain UINQUE values, and cannot contain NULL values.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
