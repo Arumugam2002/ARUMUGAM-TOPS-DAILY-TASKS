@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+
+public class AreaofTriangle {
+
+	public static void main(String[] args)
+	
+	{
+		double base, height;
+		
+		System.out.println("Enter the base of triangle:- ");
+		
+		Scanner n = new 
+		
+	}
+	
+}
