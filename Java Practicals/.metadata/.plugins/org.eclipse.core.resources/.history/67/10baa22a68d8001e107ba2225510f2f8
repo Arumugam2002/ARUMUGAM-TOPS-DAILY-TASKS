@@ -1,0 +1,14 @@
+/*   1. small (150)4->500ml coke free
+2. medium (250)3->11t coke
+3.large (500) ->2 1lt ice cream
+4. monster (700)5-> all (1.5 liter +ice)
+
+*/
+
+
+
+public class PizzaMenu {
+
+	
+	
+}

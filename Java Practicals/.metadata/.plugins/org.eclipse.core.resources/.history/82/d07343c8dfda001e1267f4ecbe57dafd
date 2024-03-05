@@ -1,0 +1,78 @@
+import java.util.Scanner;
+
+
+public class MenuUsingIf {
+
+	public static void main(String[] args)
+	{
+		
+		int totalPrice = 0;
+		
+		int smallPizza = 150;
+		int mediumPizza = 250;
+		int largePizza = 500;
+		int monsterPizza = 700;
+		
+		
+		
+		
+		
+		
+		
+		System.out.println("\nEnter your choice:-  \n1. Small Pizza \n2. Medium Pizza \n3.Large Pizza \n4.Monster Pizza");
+		
+		
+		Scanner num = new Scanner(System.in);
+		
+		int choice = num.nextInt();
+		
+		
+		
+		
+		
+		
+		while(true)
+		{
+			if(choice == 1)
+				
+			{
+				System.out.println("You have selected small pizza");
+				totalPrice += smallPizza;
+				
+				
+				
+			}
+			
+			
+			
+			
+			
+			else if(choice == 2)
+			{
+				System.out.println("You have selected medium pizza");
+				totalPrice += mediumPizza;
+				
+			}
+			
+			else if(choice == 3)
+			{
+				System.out.println("You have selected large pizza");
+				totalPrice 
+			}
+			
+			else if(choice == 4)
+			{
+				System.out.println("You have selected Monster Pizza");
+			}
+		}
+		
+		
+		
+		
+	}
+	
+	
+	
+
+	
+}
