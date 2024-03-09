@@ -1,0 +1,85 @@
+
+
+class User{
+	
+	int id;
+	String name;
+	double salary;
+	
+	User()
+	{
+		System.out.println("Default Constructor");
+	}
+	
+	User(int id, String name, double salary)
+	{
+		this.id = id;
+		this.name = name;
+		this.salary = salary;
+		
+	}
+	
+	public void setId(int id)
+	{
+		this.id = id;
+		System.out.println("id: " + id);
+	}
+	
+	public int getId()
+	{
+		return id;
+	}
+	
+	public void setName(String name)
+	{
+		this.name = name;
+		System.out.println("name" + name);
+	}
+	
+	public String getName()
+	{
+		return name;
+		
+	}
+	
+	public void setSalary(double salary)
+	{
+		this.salary = salary;
+		System.out.println("sal: " + salary);
+	}
+	
+	public double getSalary()
+	{
+		return salary;
+	}
+	
+	public void printData()
+	{
+		System.out.println("Id: " + id + " Name: "+ name + " salary: " + salary);
+	}
+	
+	
+}
+
+
+
+public class Constructors_Prac {
+
+	public static void main(String[] args)
+	{
+		User user1 = new User();
+		User user2 = new User();
+		User user3 = new User();
+		
+		user1.setId(1);
+		user1.setName("Arumugam");
+		user1.setSalary(25000);
+		
+		
+		user1.getId();
+		user1.getName();
+		user1.getSalary();
+	}
+	
+	
+}

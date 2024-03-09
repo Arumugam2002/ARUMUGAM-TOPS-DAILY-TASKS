@@ -1,0 +1,10 @@
+
+public class String_Prac {
+	public static void main(String[] args)
+	{
+		char c[] = {'J', 'A', 'V', 'A'};
+		
+		System.out.println(c);
+	}
+}
+
