@@ -1,4 +1,12 @@
-/* Write a program in Java to display the pattern like right angle triangle with a number. */
+/* Write a program in Java to display the pattern like right angle triangle with a number. 
+ 
+1
+12
+123
+1234
+12345
+  
+ */
 
 
 public class Q5_RightAngleTrianglePatternWithNumber {

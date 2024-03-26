@@ -1,0 +1,36 @@
+
+final class A{
+	final int a = 50;
+	final public void change()
+	{
+		//a++;
+		System.out.println(a);
+	}
+}
+
+class B extends A{
+	super.change();
+	 public void change1()
+	{
+		//a++;
+		System.out.println("Without final class and inheriting final class A");
+	}
+	
+}
+
+
+
+public class FinalKeyword {
+
+	public static void main(String[] args)
+	{
+		A a1 = new A();
+		a1.change();
+		
+		/* B b1 = new B();
+		b1.change1(); */
+					
+				
+	}
+	
+}
