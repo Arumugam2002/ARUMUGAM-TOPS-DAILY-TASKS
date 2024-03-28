@@ -26,7 +26,7 @@ public class Thread_Example{
 			 for(int i=1;i<=5;i++)
 			 {
 				 System.out.println(i + " : " + t);
-				 Thread.sleep(3000);
+				 Thread.sleep(10000);
 			 }
 			 
 			 System.out.println("Thread Complete");

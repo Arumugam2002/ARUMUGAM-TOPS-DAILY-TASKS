@@ -1,0 +1,47 @@
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
+import java.util.Scanner;
+
+class UserDetails {
+	private int id;
+	private String name;
+	private String address;
+	private long contact;
+	
+	UserDetails(int id, String name, String address, long contact)
+	{
+		this.id = id;
+		this.name = name;
+		this.address = address;
+		this.contact = contact;
+	}
+	
+	public String toString()
+	{
+		return "id : " + id + "name : " + name + "address :  " + address + "contact : " + contact;
+	}
+}
+
+
+public class SerializationExample {
+	
+	public static void main(String[] args) throws IOException
+	{
+		Scanner sc = new Scanner(System.in);
+		
+		UserDetails u1 = new UserDetails(1, "Arumugam", "Ahmedabad", 4125544);
+		
+		FileOutputStream fos = new FileOutputStream("user1.txt");
+		
+		ObjectOutputStream oos = new ObjectOutputStream(fos);
+		
+		oos.writeObject(u1);
+		oos.flush();
+		oos.close();
+		
+		System.out.println("Data has been written");
+	}
+	
+}
