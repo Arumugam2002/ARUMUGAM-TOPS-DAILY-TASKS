@@ -1,0 +1,35 @@
+import java.util.Enumeration;
+import java.util.Vector;
+
+public class VectorExample {
+		public static void main(String[] args)
+		{
+			Vector list = new Vector();
+			
+			list.add(12);
+			list.add("java");
+			
+			list.add('g');
+			list.add(234.33);
+			list.add(false);
+			list.add(122354);
+			
+			System.out.println(list);
+			
+			list.add("New Data");
+			list.add(12);
+			list.add(124);
+			
+			System.out.println(list);
+			
+			list.remove(5);
+			System.out.println(list);
+			
+			Enumeration em = list.elements();
+			
+			while(em.hasMoreElements())
+			{
+				System.out.println(em.nextElement());
+			}
+		}
+}
