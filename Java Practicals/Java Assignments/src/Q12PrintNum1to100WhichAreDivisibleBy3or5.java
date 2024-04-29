@@ -1,4 +1,5 @@
-
+/* Write a Java program to print numbers between 1 to 100 which are divisible by 3, 5 
+and by both.           */
 
 public class Q12PrintNum1to100WhichAreDivisibleBy3or5 {
 	public static void main(String[] args)

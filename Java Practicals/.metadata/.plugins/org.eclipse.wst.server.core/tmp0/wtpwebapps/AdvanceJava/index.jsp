@@ -7,7 +7,22 @@
 <title>Registration Form</title>
 </head>
 <body>
-	<h1>Hello Everyone</h1>
+	<h1>Registration Form</h1>
+	
+	
+	<%
+	
+		String msg = (String)request.getAttribute("msg");
+	%>
+	
+	
+	<%if(msg!=null){ %>
+	<h3><%out.print(msg); %></h3>
+	<%}%>
+	
+	
+	
+	
 
 	<form action="UserController" method="post">
 		<table>
@@ -20,7 +35,7 @@
 			<tr>
 			
 			<td>Contact:- </td>
-				<td><input type = "text" name = "contact"></td>
+				<td><input type = "number" name = "contact"></td>
 			</tr>
 			
 				<tr>

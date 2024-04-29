@@ -1,4 +1,5 @@
- 
+/* Write a Java program to display the system time.
+      */ 
 
 
 public class Q11_ToDisplaySystemTime {

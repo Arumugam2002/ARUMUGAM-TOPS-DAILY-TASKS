@@ -1,3 +1,5 @@
+/* W.A.J.P to concatenate a given string to the end of another string.                */
+
 import java.util.Scanner;
 
 public class Q14_ConcatenateTwoStrings {
