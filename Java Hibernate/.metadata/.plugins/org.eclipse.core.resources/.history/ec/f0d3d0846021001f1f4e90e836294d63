@@ -1,0 +1,11 @@
+package model;
+
+public class Vehicle {
+	
+	private int vid;
+	private String model;
+	
+	
+	
+	
+}
