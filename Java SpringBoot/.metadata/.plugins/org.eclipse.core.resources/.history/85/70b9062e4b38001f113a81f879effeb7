@@ -1,0 +1,33 @@
+package com.practice;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+
+import com.jpa.test.dao.UserRepo;
+import com.jpa.test.model.User;
+
+@SpringBootApplication
+public class BootJpaApplication {
+
+	public static void main(String[] args) {
+	
+		ApplicationContext context = SpringApplication.run(BootJpaApplication.class, args);
+		
+		UserRepo userRepo = context.getBean(UserRepo.class);
+		
+		User user = new User();
+		user.setName("user2");
+		user.setContact("12345678");
+		user.setStatus("from delhi");
+		
+		User java = new User();
+		
+		
+		
+		
+		
+		
+	}
+
+}
