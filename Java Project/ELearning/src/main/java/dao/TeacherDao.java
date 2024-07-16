@@ -201,4 +201,29 @@ public class TeacherDao {
 		}
 	}
 	
+	public static void newPassword(String email, String np)
+	{
+		try {
+			Connection conn = DBConnection.driverConnection();
+			
+			String sql = "update teacher set password = ? where email = ?";
+			
+			PreparedStatement pst = conn.prepareStatement(sql);
+			
+			pst.setString(1, np);
+			pst.setString(2, email);
+			pst.executeUpdate();
+			
+			System.out.println("Password Updated");
+		} 
+		
+		catch (Exception e) {
+			// TODO: handle exception
+			
+			e.printStackTrace();
+		}
+		
+		
+	}
+	
 }
