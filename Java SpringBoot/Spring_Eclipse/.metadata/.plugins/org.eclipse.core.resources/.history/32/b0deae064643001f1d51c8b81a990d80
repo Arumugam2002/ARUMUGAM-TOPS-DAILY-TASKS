@@ -1,0 +1,35 @@
+package com.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class HomeController {
+
+	@GetMapping("/")
+	public String index(Model m) {
+		return "index";
+	}
+	
+	@GetMapping("/about")
+	public String about(Model m) {
+		return "about";
+	}
+	
+	@GetMapping("/contact")
+	public String contact(Model m) {
+		return "contact";
+	}
+	
+	@GetMapping("/courses")
+	public String courses(Model m) {
+		return "courses";
+	}
+	
+	@GetMapping("/team")
+	public String team(Model m) {
+		return "team";
+	}
+
+}
