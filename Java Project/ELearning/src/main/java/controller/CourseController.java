@@ -3,14 +3,17 @@ package controller;
 import java.io.File;
 import java.io.IOException;
 
-import javax.mail.Part;
-import javax.management.loading.PrivateClassLoader;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Part;
+
+import dao.CourseDao;
+import model.Course;
 
 /**
  * Servlet implementation class CourseController
@@ -60,23 +63,97 @@ public class CourseController extends HttpServlet {
 		
 		String action = request.getParameter("action");
 		
-		if(action.equalsIgnoreCase("upload-product"))
+		if(action.equalsIgnoreCase("upload-course"))
 		{
 			
 			String savePath = "C:\\Users\\arumu\\eclipse-workspace\\ELearning\\src\\main\\webapp\\img";
 			
 			File fileSaveDir = new File(savePath);
-			{
+			
 				if(!fileSaveDir.exists())
 				{
 					fileSaveDir.exists();
 				}
+			
+			
+			Part file1 = request.getPart("cimage");
+			String fileName = extractfilename(file1);
+			
+			file1.write(savePath + File.separator + fileName);
+			
+			String filePath = savePath + File.separator + fileName;
+			
+			String savePath2 = "C:\\Users\\arumu\\eclipse-workspace\\ELearning\\src\\main\\webapp\\img";
+			
+			File imgSaveDir = new File(savePath2);
+			
+			if(!imgSaveDir.exists())
+			{
+				imgSaveDir.mkdir();
 			}
 			
+			Course c = new Course();
+			c.setTid(Integer.parseInt(request.getParameter("tid")));
+			c.setCimage(fileName);
+			c.setCname(request.getParameter("cname"));
+			c.setCprice(Integer.parseInt(request.getParameter("cprice")));
+			c.setCcategory(request.getParameter("ccategory"));
+			c.setCdesc(request.getParameter("cdesc"));
 			
+			CourseDao.uploadCourse(c);
+			response.sendRedirect("teacher-home.jsp");
+					
 			
 			
 		}
+		
+		else if(action.equalsIgnoreCase("update-course"))
+			
+		{
+			String savePath = "C:\\Users\\arumu\\eclipse-workspace\\ELearning\\src\\main\\webapp\\img";
+			
+			File fileSaveDir = new File(savePath);
+			
+			if(!fileSaveDir.exists())
+			{
+				fileSaveDir.exists();
+			}
+		
+		
+		Part file1 = request.getPart("cimage");
+		String fileName = extractfilename(file1);
+		
+		file1.write(savePath + File.separator + fileName);
+		
+		String filePath = savePath + File.separator + fileName;
+		
+		String savePath2 = "C:\\Users\\arumu\\eclipse-workspace\\ELearning\\src\\main\\webapp\\img";
+		
+		File imgSaveDir = new File(savePath2);
+		
+		if(!imgSaveDir.exists())
+		{
+			imgSaveDir.mkdir();
+		}
+		
+		Course c = new Course();
+		c.setCid(Integer.parseInt(request.getParameter("cid")));
+		c.setCimage(fileName);
+		c.setCname(request.getParameter("cname"));
+		c.setCprice(Integer.parseInt(request.getParameter("cprice")));
+		c.setCcategory(request.getParameter("ccategory"));
+		c.setCdesc(request.getParameter("cdesc"));
+		
+		
+		CourseDao.updateCourse(c);
+		response.sendRedirect("manage-course.jsp");
+			
+		}
+			
+		
+		
+		
+		
 		
 	}
 	

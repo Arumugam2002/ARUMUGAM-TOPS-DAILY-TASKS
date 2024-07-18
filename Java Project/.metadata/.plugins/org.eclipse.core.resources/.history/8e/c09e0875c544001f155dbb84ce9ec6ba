@@ -1,0 +1,70 @@
+<%@page import="model.Course"%>
+<%@page import="dao.CourseDao"%>
+<%@page import="java.util.List"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+	
+	<%@include file = "teacher-header.jsp" %>
+	
+	
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<div class="container-xxl py-5">
+		<div class="container">
+			<div class="row g-4">
+
+
+				<table class="table">
+					<thead>
+						<tr>
+							<th scope="col">Image</th>
+							<th scope="col">Course Name</th>
+							<th scope="col">Course Price</th>
+							<th scope="col">Course Category</th>
+							<th scope="col">Course Description</th>
+							<th scope="col">Edit</th>
+							
+							
+							
+						</tr>
+					</thead>
+					<tbody>
+					
+					<%List<Course> list = CourseDao.getProductByTid(t.getId()); %>
+					<%for(Course) %>
+					
+					
+						<tr>
+							<th scope="row">1</th>
+							<td>Mark</td>
+							<td>Otto</td>
+							<td>@mdo</td>
+						</tr>
+						<tr>
+							<th scope="row">2</th>
+							<td>Jacob</td>
+							<td>Thornton</td>
+							<td>@fat</td>
+						</tr>
+						<tr>
+							<th scope="row">3</th>
+							<td colspan="2">Larry the Bird</td>
+							<td>@twitter</td>
+						</tr>
+					</tbody>
+				</table>
+
+
+			</div>
+		</div>
+	</div>
+
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+127.0.0.1 - - [29/Jun/2024:12:11:27 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [29/Jun/2024:12:11:32 +0530] "GET /SpringmvcNew/ HTTP/1.1" 200 135
+0:0:0:0:0:0:0:1 - - [29/Jun/2024:12:11:33 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [29/Jun/2024:12:11:40 +0530] "GET /SpringmvcNew/home HTTP/1.1" 200 2032
+0:0:0:0:0:0:0:1 - - [29/Jun/2024:12:11:43 +0530] "GET /SpringmvcNew/register HTTP/1.1" 200 2399
+0:0:0:0:0:0:0:1 - - [29/Jun/2024:12:13:02 +0530] "GET /SpringmvcNew/create?name=Raghav+Pandey&contact=9874563210&address=Bhuj&email=raghavpandey%40gmail.com&password=raghav123 HTTP/1.1" 200 2325
+0:0:0:0:0:0:0:1 - - [29/Jun/2024:14:41:03 +0530] "GET /SpringmvcNew/create?name=Raghav+Pandey&contact=9874563210&address=Bhuj&email=raghavpandey%40gmail.com&password=raghav123 HTTP/1.1" 500 26404
