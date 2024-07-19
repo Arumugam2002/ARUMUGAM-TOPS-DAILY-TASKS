@@ -1,0 +1,9 @@
+package model;
+
+public class WishList {
+
+	private int wid, custid, pid;
+	
+	
+	
+}

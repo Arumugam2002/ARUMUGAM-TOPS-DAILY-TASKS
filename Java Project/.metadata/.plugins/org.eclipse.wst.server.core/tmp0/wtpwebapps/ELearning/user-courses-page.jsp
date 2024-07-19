@@ -89,71 +89,96 @@
 
 	<!-- Courses Start -->
 	<div class="container-xxl py-5">
-    <div class="container">
-        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h6 class="section-title bg-white text-center text-primary px-3">Courses</h6>
-            <h1 class="mb-5">Popular Courses</h1>
-        </div>
-        <div class="row g-4 justify-content-center">
-            <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="d-flex flex-wrap justify-content-center">
-                    <%
-                    List<Course> list = CourseDao.getAllCourses();
-                    List<Teacher> list1 = TeacherDao.getTeacherName();
-                    %>
-                    <%
-                    for (Course c : list) {
-                        Teacher t1 = null;
-                        for (Teacher t : list1) {
-                            if (t.getId() == c.getTid()) { 
-                                t1 = t;
-                                break;
-                            }
-                        }
-                        if (t1 != null) {
-                    %>
-                    <div class="course-item bg-light m-2"
-                        style="flex: 1 0 21%; max-width: 21%;">
-                        <div class="position-relative overflow-hidden">
-                            <img src="img/<%=c.getCimage()%>" class="img-fluid"
-                                style="height: 200px; width: 100%; object-fit: cover;">
-                            <div
-                                class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
-                                <a href="#"
-                                    class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end"
-                                    style="border-radius: 30px 0 0 30px;">Read More</a> <a
-                                    href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3"
-                                    style="border-radius: 0 30px 30px 0;">Join Now</a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4 pb-0">
-                            <h3 class="mb-0"><%=c.getCprice()%></h3>
-                            <div class="mb-3">
-                                <small class="fa fa-star text-primary"></small> <small
-                                    class="fa fa-star text-primary"></small> <small
-                                    class="fa fa-star text-primary"></small> <small
-                                    class="fa fa-star text-primary"></small> <small
-                                    class="fa fa-star text-primary"></small> <small>(123)</small>
-                            </div>
-                            <h5 class="mb-4">
-                                <a href="user-single-course.jsp?id=<%=c.getCid()%>"><%=c.getCname()%></a>
-                            </h5>
-                            <div class="d-flex border-top">
-                                <h6 class="mb-4">
-                               <span><%=t1.getName()%></span> 
-                            </h6>
-                            </div>
-                        </div>
-                    </div>
-                    <%
-                        }
-                    }
-                    %>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+		<div class="container">
+			<div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+
+				<%
+				String msg = (String) request.getAttribute("msg");
+
+				if (msg != null) {
+				%>
+
+				<div class="col-12">
+					<h4 class="contact-title">
+						<%
+						out.print(msg);
+						%>
+					</h4>
+
+				</div>
+				<%
+				}
+				%>
+				<h6 class="section-title bg-white text-center text-primary px-3">Courses</h6>
+				<h1 class="mb-5">Popular Courses</h1>
+			</div>
+			<div class="row g-4 justify-content-center">
+				<div class="col-lg-12 wow fadeInUp" data-wow-delay="0.1s">
+					<div class="d-flex flex-wrap justify-content-center">
+						<%
+						List<Course> list = CourseDao.getAllCourses();
+						List<Teacher> list1 = TeacherDao.getTeacherName();
+						%>
+						<%
+						for (Course c : list) {
+							Teacher t1 = null;
+							for (Teacher t : list1) {
+								if (t.getId() == c.getTid()) {
+							t1 = t;
+							break;
+								}
+							}
+							if (t1 != null) {
+						%>
+						<div class="course-item bg-light m-2"
+							style="flex: 1 0 21%; max-width: 21%; position: relative;">
+							<div class="position-relative overflow-hidden">
+								<img src="img/<%=c.getCimage()%>" class="img-fluid"
+									style="height: 200px; width: 100%; object-fit: cover;">
+							</div>
+							<div class="text-center p-4 pb-0">
+								<h3 class="mb-0"><%=c.getCprice()%></h3>
+
+								<h5 class="mb-4">
+									<a href="user-single-course.jsp?id=<%=c.getCid()%>"><%=c.getCname()%></a>
+								</h5>
+								<div class="icon-overlay text-center mb-3">
+									<a
+										href="CartController?action=addtocart&userid=<%=u.getId()%>&cid=<%=c.getCid()%>"
+										class="text-primary mx-2"><i class="fa fa-shopping-cart"></i></a>
+										
+									<form action="WishListController" method="post" style="display: inline;">
+										<input type="hidden" name="action" value="addtowishlist">
+										<input type="hidden" name="userid" value="<%=u.getId()%>">
+										<input type="hidden" name="cid" value="<%=c.getCid()%>">
+										<button type="submit" class="text-primary mx-2" style="background: none; border: none; padding: 0;">
+											<i class="fa fa-heart"></i>
+										</button>
+									</form>
+								</div>
+								<div class="d-flex border-top">
+									<h6 class="mb-4">
+										<span><%=t1.getName()%></span>
+									</h6>
+								</div>
+							</div>
+						</div>
+						<%
+						}
+						}
+						%>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
 
 
 

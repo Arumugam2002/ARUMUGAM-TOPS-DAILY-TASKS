@@ -1,0 +1,15 @@
+package dao;
+
+import java.sql.Connection;
+
+import model.WishList;
+
+public class WishListDao {
+
+	public static void insertWishList(WishList w)
+	{
+		Connection conn = 
+	}
+	
+	
+}

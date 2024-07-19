@@ -64,7 +64,7 @@
 											<span><%=c.getCprice()%></span>
 										</div>
 										
-									<a href="#" class = "white-btn mr-10">Add To Cart</a>
+									<a href="add-to-cart.jsp" class = "white-btn mr-10">Add To Cart</a>
 									</div>
 
 								</div>

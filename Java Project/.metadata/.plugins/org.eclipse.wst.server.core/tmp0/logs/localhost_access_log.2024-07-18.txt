@@ -460,3 +460,12 @@
 0:0:0:0:0:0:0:1 - - [18/Jul/2024:21:25:52 +0530] "GET /ELearning/user-single-course.jsp?id=7 HTTP/1.1" 200 10813
 0:0:0:0:0:0:0:1 - - [18/Jul/2024:21:25:55 +0530] "GET /ELearning/user-single-course.jsp?id=8 HTTP/1.1" 200 10840
 0:0:0:0:0:0:0:1 - - [18/Jul/2024:21:25:59 +0530] "GET /ELearning/user-home.jsp HTTP/1.1" 200 36051
+127.0.0.1 - - [18/Jul/2024:22:49:07 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [18/Jul/2024:22:49:07 +0530] "GET /ELearning/index.jsp HTTP/1.1" 200 36421
+0:0:0:0:0:0:0:1 - - [18/Jul/2024:22:49:08 +0530] "GET /ELearning/img/favicon.ico HTTP/1.1" 404 784
+0:0:0:0:0:0:0:1 - - [18/Jul/2024:22:49:15 +0530] "GET /ELearning/index.jsp HTTP/1.1" 200 36421
+0:0:0:0:0:0:0:1 - - [18/Jul/2024:22:50:20 +0530] "GET /ELearning/index.jsp HTTP/1.1" 200 36421
+0:0:0:0:0:0:0:1 - - [18/Jul/2024:22:50:20 +0530] "GET /ELearning/img/favicon.png HTTP/1.1" 200 369
+0:0:0:0:0:0:0:1 - - [18/Jul/2024:22:50:50 +0530] "GET /ELearning/user-login.jsp HTTP/1.1" 200 12280
+0:0:0:0:0:0:0:1 - - [18/Jul/2024:22:50:59 +0530] "POST /ELearning/UserController HTTP/1.1" 200 12707
+0:0:0:0:0:0:0:1 - - [18/Jul/2024:22:51:03 +0530] "GET /ELearning/index.jsp HTTP/1.1" 200 36421
