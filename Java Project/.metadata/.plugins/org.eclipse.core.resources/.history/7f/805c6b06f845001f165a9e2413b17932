@@ -1,0 +1,12 @@
+package model;
+
+public class Cart {
+
+	private int cartid, userid, cid, qty, cprice, totalprice, subtotal;
+	private String payment_status;
+	
+	
+	
+	
+	
+}

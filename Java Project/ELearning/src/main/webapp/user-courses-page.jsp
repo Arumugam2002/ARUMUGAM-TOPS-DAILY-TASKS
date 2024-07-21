@@ -109,6 +109,24 @@
 				<%
 				}
 				%>
+				
+				<%
+				String msg1 = (String) request.getAttribute("msg1");
+
+				if (msg1 != null) {
+				%>
+
+				<div class="col-12">
+					<h4 class="contact-title">
+						<%
+						out.print(msg1);
+						%>
+					</h4>
+
+				</div>
+				<%
+				}
+				%>
 				<h6 class="section-title bg-white text-center text-primary px-3">Courses</h6>
 				<h1 class="mb-5">Popular Courses</h1>
 			</div>
@@ -143,18 +161,27 @@
 									<a href="user-single-course.jsp?id=<%=c.getCid()%>"><%=c.getCname()%></a>
 								</h5>
 								<div class="icon-overlay text-center mb-3">
-									<a
-										href="CartController?action=addtocart&userid=<%=u.getId()%>&cid=<%=c.getCid()%>"
-										class="text-primary mx-2"><i class="fa fa-shopping-cart"></i></a>
-										
-									<form action="WishListController" method="post" style="display: inline;">
+									<form action="CartController" method="post"
+										style="display: inline-block;">
+										<input type="hidden" name="action" value="addtocart">
+										<input type="hidden" name="userid" value="<%=u.getId()%>">
+										<input type="hidden" name="cid" value="<%=c.getCid()%>">
+										<button type="submit" class="text-primary mx-2">
+											<i class="fa fa-shopping-cart"></i>
+										</button>
+									</form>
+
+									<form action="WishListController" method="post"
+										style="display: inline-block;">
 										<input type="hidden" name="action" value="addtowishlist">
 										<input type="hidden" name="userid" value="<%=u.getId()%>">
 										<input type="hidden" name="cid" value="<%=c.getCid()%>">
-										<button type="submit" class="text-primary mx-2" style="background: none; border: none; padding: 0;">
+										<button type="submit" class="text-primary mx-2"
+											style="background: none; border: none; padding: 0;">
 											<i class="fa fa-heart"></i>
 										</button>
 									</form>
+
 								</div>
 								<div class="d-flex border-top">
 									<h6 class="mb-4">

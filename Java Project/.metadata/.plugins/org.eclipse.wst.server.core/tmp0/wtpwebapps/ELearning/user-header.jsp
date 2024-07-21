@@ -1,4 +1,9 @@
+<%@page import="dao.WishListDao"%>
+<%@page import="dao.CartDao"%>
+<%@page import="model.WishList"%>
+<%@page import="java.util.List"%>
 <%@ page import="model.User" %>
+<%@ page import="model.Cart" %>
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -87,8 +92,10 @@
                 </div>
             </div>
             <a href="user-contact-page.jsp" class="nav-item nav-link">Contact</a>
-            <a href="cart.jsp" class="nav-item nav-link"><i class="fa fa-shopping-cart"></i></a>
-            <a href="user-wishlist.jsp" class="nav-item nav-link"><i class="fa fa-heart"></i></a>
+            <%List<Cart> cList = CartDao.getCartByUserId(u.getId());%>
+            <a href="user-cart.jsp" class="nav-item nav-link"><i class="fa fa-shopping-cart"><%out.print(cList.size()); %></i></a>
+            <%List<WishList> wList = WishListDao.getWishListByUserId(u.getId()); %>
+            <a href="user-wishlist.jsp" class="nav-item nav-link"><i class="fa fa-heart"><%out.print(wList.size()); %></i></a>
         </div>
         <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>
     </div>
