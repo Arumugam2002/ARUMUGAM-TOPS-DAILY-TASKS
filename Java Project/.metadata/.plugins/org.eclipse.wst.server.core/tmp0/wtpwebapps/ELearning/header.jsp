@@ -81,6 +81,10 @@
                     </div>
                 </div>
                 <a href="contact-page.jsp" class="nav-item nav-link">Contact</a>
+               
+            <a href="user-login.jsp" class="nav-item nav-link"><i class="fa fa-shopping-cart"></i></a>
+            
+            <a href="user-login.jsp" class="nav-item nav-link"><i class="fa fa-heart"><%%></i></a>
             </div>
             <a href="user-login.jsp" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>
         </div>

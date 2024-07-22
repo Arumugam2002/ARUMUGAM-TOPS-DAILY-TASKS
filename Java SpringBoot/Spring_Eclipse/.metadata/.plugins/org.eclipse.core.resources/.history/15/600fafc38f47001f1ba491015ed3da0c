@@ -1,0 +1,27 @@
+package Services;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.model.Student;
+import com.repo.StudentRepo;
+
+public class StudentServices {
+
+	
+	@Autowired
+	StudentRepo sturepo;
+	
+	public void updateStudents(Student s, int id) {  
+
+		s.setId(id);
+		this.sturepo.save(s);
+	
+}
+	
+	public void deleteStudents(int id) {
+		// list.stream().filter(u->u.getId() != id).collect(Collectors.toList());
+
+		this.sturepo.deleteById(id);
+	}
+	
+}

@@ -134,6 +134,43 @@ public class CartDao {
 		}
 		return c;
 	}
+	
+	public static Cart getSingleCartByUserId(int userid)
+	{
+		Cart c = null;
+		
+		try {
+			
+			Connection conn = DBConnection.driverConnection();
+			String sql = "select * from cart where userid = ?";
+			PreparedStatement pst = conn.prepareStatement(sql);
+			
+			pst.setInt(1, userid);
+			
+			ResultSet rs = pst.executeQuery();
+			
+			while(rs.next())
+			{
+				c = new Cart();
+				c.setCartid(rs.getInt("cartid"));
+				c.setUserid(rs.getInt("userid"));
+				c.setCid(rs.getInt("cid"));
+				c.setQty(rs.getInt("qty"));
+				c.setCprice(rs.getInt("cprice"));
+				c.setTotalprice(rs.getInt("totalprice"));
+				c.setSubtotal(rs.getInt("subtotal"));
+				c.setPayment_status(rs.getString("payment_status"));
+				
+			}
+			
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			
+			e.printStackTrace();
+		}
+		return c;
+	}
 
 	public static void removeCourseFromCart(int cartid) {
 		try {

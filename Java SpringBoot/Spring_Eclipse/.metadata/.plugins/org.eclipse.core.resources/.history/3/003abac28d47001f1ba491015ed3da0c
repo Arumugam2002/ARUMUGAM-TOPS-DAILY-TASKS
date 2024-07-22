@@ -1,0 +1,10 @@
+package Services;
+
+import com.repo.StudentRepo;
+
+public class StudentServices {
+
+	
+	StudentRepo studentRepo
+	
+}

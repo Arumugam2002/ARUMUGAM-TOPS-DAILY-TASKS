@@ -1,0 +1,13 @@
+package Services;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.repo.StudentRepo;
+
+public class StudentServices {
+
+	
+	@Autowired
+	StudentRepo sturepo;
+	
+}
