@@ -21,7 +21,7 @@ class SwingDemo implements ActionListener{
 		JFrame fr = new JFrame("MyApp");
 		
 		fr.setVisible(true);
-		fr.setSize(700, 500);
+		fr.setSize(500, 500);
 		fr.setLayout(null);
 		
 		l1 = new JLabel("Id : ");

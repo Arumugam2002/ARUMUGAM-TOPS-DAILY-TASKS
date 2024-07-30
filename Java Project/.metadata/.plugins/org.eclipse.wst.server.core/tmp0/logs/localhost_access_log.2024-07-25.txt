@@ -1,0 +1,16 @@
+127.0.0.1 - - [25/Jul/2024:11:48:51 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [25/Jul/2024:11:48:51 +0530] "GET /ELearning/index.jsp HTTP/1.1" 200 36652
+0:0:0:0:0:0:0:1 - - [25/Jul/2024:11:48:51 +0530] "GET /ELearning/css/style.css HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [25/Jul/2024:11:48:56 +0530] "GET /ELearning/user-login.jsp HTTP/1.1" 200 12512
+0:0:0:0:0:0:0:1 - - [25/Jul/2024:11:49:14 +0530] "POST /ELearning/UserController HTTP/1.1" 200 12938
+0:0:0:0:0:0:0:1 - - [25/Jul/2024:11:49:32 +0530] "GET /ELearning/user-login.jsp HTTP/1.1" 200 12512
+0:0:0:0:0:0:0:1 - - [25/Jul/2024:11:49:40 +0530] "POST /ELearning/UserController HTTP/1.1" 200 36087
+0:0:0:0:0:0:0:1 - - [25/Jul/2024:11:49:49 +0530] "GET /ELearning/user-cart.jsp HTTP/1.1" 200 17299
+0:0:0:0:0:0:0:1 - - [25/Jul/2024:11:49:56 +0530] "POST /ELearning/user-payment.jsp?amount=900&cid=15%3E HTTP/1.1" 500 2689
+0:0:0:0:0:0:0:1 - - [25/Jul/2024:11:49:56 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+127.0.0.1 - - [25/Jul/2024:12:05:41 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [25/Jul/2024:12:05:41 +0530] "GET /ELearning/index.jsp HTTP/1.1" 200 36652
+0:0:0:0:0:0:0:1 - - [25/Jul/2024:12:05:44 +0530] "GET /ELearning/user-login.jsp HTTP/1.1" 200 12512
+0:0:0:0:0:0:0:1 - - [25/Jul/2024:12:05:58 +0530] "POST /ELearning/UserController HTTP/1.1" 200 36087
+0:0:0:0:0:0:0:1 - - [25/Jul/2024:12:06:01 +0530] "GET /ELearning/user-cart.jsp HTTP/1.1" 200 17298
+0:0:0:0:0:0:0:1 - - [25/Jul/2024:12:06:04 +0530] "POST /ELearning/user-payment.jsp?amount=900&cid=15 HTTP/1.1" 200 2226

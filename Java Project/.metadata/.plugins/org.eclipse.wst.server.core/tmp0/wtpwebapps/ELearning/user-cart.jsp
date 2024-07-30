@@ -142,7 +142,7 @@
                 Cart c = CartDao.getSingleCartByUserId(u.getId());
                 %>
 
-                <form action="payment.jsp?amount=<%= subtotal %>&cid=<%=c.getCartid() %>>" method="post">
+                <form action="user-payment.jsp?amount=<%= subtotal %>&cid=<%=c.getCartid() %>" method="post">
                     <table border="1">
                         <tbody>
                             <tr>

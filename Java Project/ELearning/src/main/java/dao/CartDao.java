@@ -215,5 +215,27 @@ public class CartDao {
 			e.printStackTrace();
 		}
 	}
+	
+	public static void updateStatus(int cartid)
+	{
+			try {
+				
+				Connection conn = DBConnection.driverConnection();
+				
+				String sql = "update cart set payment_status = 'successful' where cartid = ?";
+				PreparedStatement pst = conn.prepareStatement(sql);
+				
+				pst.setInt(1, cartid);
+				
+				pst.executeUpdate();
+				
+				System.out.println("Payment Status has been Updated");
+				
+			} catch (Exception e) {
+				// TODO: handle exception
+				
+				e.printStackTrace();
+			}
+	}
 
 }

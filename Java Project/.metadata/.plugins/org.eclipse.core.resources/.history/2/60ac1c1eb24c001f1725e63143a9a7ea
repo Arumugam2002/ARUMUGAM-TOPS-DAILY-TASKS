@@ -1,0 +1,16 @@
+
+public class ReverseANumberAndRemoveZeroFromFront {
+
+	public static int reverseAndRemoveFrontZeroes(int number)
+	{
+		String numStr = Integer.toString(number);
+		
+		String revStr = new StringBuilder(numStr).reverse().toString();
+		
+		int revNum = Integer.parseInt(revStr);
+		
+		return
+	}
+	
+	
+}

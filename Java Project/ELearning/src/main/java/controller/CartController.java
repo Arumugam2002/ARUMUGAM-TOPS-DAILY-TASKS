@@ -67,7 +67,7 @@ public class CartController extends HttpServlet {
 			if(flag == false)
 			{
 				CartDao.insertIntoCart(c);
-				response.sendRedirect("user-home.jsp");
+				response.sendRedirect("user-courses-page.jsp");
 			}
 			
 			else {

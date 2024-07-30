@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class ReverseANumberAndRemoveZeroFromFront {
+
+	public static int reverseAndRemoveFrontZeroes(int number)
+	{
+//		String numStr = Integer.toString(number);
+//		
+//		String revStr = new StringBuilder(numStr).reverse().toString();
+//		
+//		int revNum = Integer.parseInt(revStr);
+//		
+//		return revNum;
+		
+		int rev = 0;
+		
+		while(number! = 0)
+		{
+			int digit = num %
+		}
+	}
+	
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter a Number:- ");
+		int num1 = sc.nextInt();
+		
+		int reveNum = reverseAndRemoveFrontZeroes(num1);
+		
+		System.out.println("Number Reversed and With Front Zeroes are removed are:- " + reveNum);
+	}
+	
+	
+}
