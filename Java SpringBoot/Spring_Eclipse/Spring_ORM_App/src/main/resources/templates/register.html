@@ -1,0 +1,75 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+	<head>
+		<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+	</head>
+
+	<body>
+
+		<h1>Registration Form</h1>
+
+		<div class="col-lg-4 col-md-12 wow fadeInUp">
+
+			<form action="/register_process" method="post">
+				<div class="row g-3">
+					<div class="col-12">
+						<label for="First Name">First Name:- </label>
+						<input type="text" class="form-control" name="fname" id="name" placeholder="Enter First Name">
+
+					</div>
+
+					<div class="col-12">
+						<label for="Last Name">Last Name:- </label>
+						<input type="text" class="form-control" name="lname" id="name" placeholder="Enter Last Name">
+
+					</div>
+
+					<div class="col-12">
+						<label for="Email">Email Id:- </label>
+						<input type="email" class="form-control" name="email" id="name" placeholder="Enter email">
+
+					</div>
+
+					<div class="col-12">
+						<label for="Password">Password:- </label>
+						<input type="password" class="form-control" name="password" id="name" placeholder="Enter password">
+
+					</div>
+
+
+					<div class="col-12">
+						<label for="Mobile No">Mobile No:- </label>
+						<input type="text" class="form-control" name="mobile" id="subject"
+							placeholder="Enter mobile No">
+
+
+					</div>
+
+					<div class="col-12">
+						<label for="Gender">Gender:- </label>
+						<select id="gender" name="gender" class="form-control">
+							<option value="Male">Male</option>
+							<option value="Female">Female</option>
+
+						</select>
+
+
+					</div>
+
+					<div class="col-12">
+						<label for="First Name">Profile Picture:- </label>
+						<input type="file" class="form-control" name="profile_pic" id="subject">
+
+
+					</div>
+
+					<div class="col-12">
+						<button class="btn btn-primary w-100 py-3" type="submit">Register</button>
+					</div>
+				</div>
+			</form>
+		</div>
+
+	</body>
+
+	</html>

@@ -1,0 +1,64 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+	<h1>Edit Profile</h1>
+	
+
+	<div class="col-lg-4 col-md-12 wow fadeInUp">
+		<form action="/edit_profile_process" th:object="${user}" method="post">
+			<div class="row g-3">
+				<div class="col-12">
+					<label for="First Name">First Name:- </label>
+					<input type="text" class="form-control" name="fname" id="name" th:field="*{fname}">
+				</div>
+				<div class="col-12">
+					<label for="Last Name">Last Name:- </label>
+					<input type="text" class="form-control" name="lname" id="name" th:field="*{lname}">
+				</div>
+
+				<div class="col-12">
+					<label for="Email">Email Id:- </label>
+					<input type="email" class="form-control" name="email" id="name" th:field="*{email}">
+				</div>
+
+				<div class="col-12">
+					<label for="Mobile No">Mobile No:- </label>
+					<input type="text" class="form-control" name="mobile" id="contact" th:field="*{mobile}">
+				</div>
+
+				<div class="col-12">
+				    <label for="Gender">Gender:- </label>
+				    <select id="gender" name="gender" class="form-control" th:field="*{gender}">
+				        <option th:each="gender : ${genders}" th:value="${gender}" th:text="${gender}">Gender</option>
+				    </select>
+				</div>
+
+				<div class="col-12">
+					<input th:src="@{$imagePath}" alt="Profile_Image">
+				</div>
+				<div class="col-12">
+					<label for="First Name">Profile Picture:- </label>
+					<input type="file" class="form-control" name="profile_pic" id="contact" th:field="*{profile_pic}">
+				</div>
+
+				<div class="col-12">
+					<button class="btn btn-primary w-100 py-3" type="submit">Update</button>
+				</div>
+
+				<div class="col-12">
+				        <a href="/logout" class="btn btn-danger mt-3">Logout</a>
+				    </div>
+				
+				
+			</div>
+		</form>
+	</div>
+
+</body>
+
+</html>
